@@ -11,6 +11,9 @@
   <meta property="og:image" content="https://egotac.github.io/assets/images/overview.png">
   <title>EgoTac: In-the-wild Tactile Prediction from Egocentric Vision</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -34,27 +37,29 @@
       <p class="venue">NeurIPS 2026 · Poster</p>
       <h1 id="paper-title">EgoTac: In-the-wild Tactile Prediction from Egocentric Vision</h1>
       <div class="authors" aria-label="Authors">
-        <span>Wenkang Zhang<sup>1,2</sup></span>
-        <span>Chengbo Yuan<sup>3</sup></span>
-        <span>Zicheng Zhang<sup>4</sup></span>
-        <span>Zhengxue Cheng<sup>2</sup></span>
-        <span>Yang Gao<sup>1,3,†</sup></span>
+        <span><a href="https://mr-zwkid.github.io/" target="_blank" rel="noopener noreferrer">Wenkang Zhang</a><sup>1,2</sup></span>
+        <span><a href="https://michaelyuancb.github.io/" target="_blank" rel="noopener noreferrer">Chengbo Yuan</a><sup>3</sup></span>
+        <span><a href="https://victkk.github.io/" target="_blank" rel="noopener noreferrer">Zicheng Zhang</a><sup>4</sup></span>
+        <span><a href="https://medialab.sjtu.edu.cn/author/zhengxue-cheng/" target="_blank" rel="noopener noreferrer">Zhengxue Cheng</a><sup>2</sup></span>
+        <span><a href="https://yang-gao.weebly.com/" target="_blank" rel="noopener noreferrer">Yang Gao</a><sup>1,3,†</sup></span>
       </div>
       <p class="affiliations"><sup>1</sup> Shanghai Qi Zhi Institute &nbsp; <sup>2</sup> Shanghai Jiao Tong University &nbsp; <sup>3</sup> Tsinghua University &nbsp; <sup>4</sup> Fudan University</p>
       <p class="corresponding">† Corresponding author</p>
       <div class="resource-links" aria-label="Paper resources">
         <a href="https://arxiv.org/abs/2608.15060" target="_blank" rel="noopener noreferrer"><img src="assets/icons/arxiv.svg" alt="" width="19" height="19">arXiv</a>
         <a href="assets/paper/egotac-paper.pdf" target="_blank" rel="noopener noreferrer"><img src="assets/icons/pdf.svg" alt="" width="19" height="19">PDF</a>
-        <a href="https://github.com/egotac" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="" width="19" height="19">GitHub</a>
+        <!-- Replace each placeholder with an anchor when that resource is released. -->
+        <span class="resource-link is-pending" title="Code release coming soon"><img src="assets/icons/github.svg" alt="" width="19" height="19">Code <small>soon</small></span>
+        <span class="resource-link is-pending" title="Dataset release coming soon"><img src="assets/icons/dataset.svg" alt="" width="19" height="19">Dataset <small>soon</small></span>
       </div>
-      <p class="one-line">Predicting tactile force and contact on both hands from first-person video.</p>
+      <p class="one-line">A visual pathway to touch: predicting force and contact on both hands from first-person video.</p>
     </section>
 
     <figure class="paper-figure lead-figure">
       <a href="assets/images/overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the EgoTac overview figure at full resolution">
         <img src="assets/images/overview.png" alt="Overview of EgoTac: force-labeled self-collected data and contact-labeled hand-object datasets train a model that predicts touch in unseen egocentric videos" width="3090" height="973" fetchpriority="high">
       </a>
-      <figcaption><strong>Overview.</strong> EgoTac learns from force-labeled and contact-labeled interactions, then predicts tactile force and contact in videos recorded without tactile sensors. <a href="assets/images/overview.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+      <figcaption><strong>Overview.</strong> EgoTac learns from force-labeled and contact-labeled interactions, then predicts tactile force and contact in videos recorded without tactile sensors.</figcaption>
     </figure>
 
     <section id="abstract" class="content-section">
@@ -69,7 +74,7 @@
         <a href="assets/images/dataset.png" target="_blank" rel="noopener noreferrer" aria-label="Open the dataset figure at full resolution">
           <img src="assets/images/dataset.png" alt="The EgoTac dataset combines heterogeneous tactile and contact labels in a shared MANO representation, including a self-collected camera and tactile glove setup" width="3583" height="1395" loading="lazy">
         </a>
-        <figcaption><strong>Dataset overview.</strong> Mixed-source supervision and the self-collected capture system. <a href="assets/images/dataset.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+        <figcaption><strong>Dataset overview.</strong> Mixed-source supervision and the self-collected capture system.</figcaption>
       </figure>
     </section>
 
@@ -80,7 +85,7 @@
         <a href="assets/images/method.png" target="_blank" rel="noopener noreferrer" aria-label="Open the method figure at full resolution">
           <img src="assets/images/method.png" alt="EgoTac architecture with visual encoding, temporal fusion, a tactile decoder, and separate force regression and contact classification outputs" width="2898" height="1134" loading="lazy">
         </a>
-        <figcaption><strong>Model architecture.</strong> Visual tokens are fused over time and decoded into per-vertex force and contact predictions. <a href="assets/images/method.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+        <figcaption><strong>Model architecture.</strong> Visual tokens are fused over time and decoded into per-vertex force and contact predictions.</figcaption>
       </figure>
     </section>
 
@@ -92,23 +97,40 @@
         <a href="assets/images/zero-shot.png" target="_blank" rel="noopener noreferrer" aria-label="Open the zero-shot results figure at full resolution">
           <img src="assets/images/zero-shot.png" alt="Qualitative tactile predictions on EgoDex, EPIC-KITCHENS, Ego4D, and EgoPAT3D videos" width="2637" height="1127" loading="lazy">
         </a>
-        <figcaption><strong>In-the-wild results.</strong> Examples from EgoDex, EPIC-KITCHENS, Ego4D, and EgoPAT3D. <a href="assets/images/zero-shot.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+        <figcaption><strong>In-the-wild results.</strong> Examples from EgoDex, EPIC-KITCHENS, Ego4D, and EgoPAT3D.</figcaption>
       </figure>
 
-      <h3>Video examples</h3>
-      <div class="demo-grid">
-        <figure class="demo">
-          <video controls playsinline preload="none" poster="assets/images/epic-kitchens-poster.jpg" width="1600" height="672" aria-label="EPIC-KITCHENS tactile prediction video"><source src="assets/videos/epic-kitchens.mp4" type="video/mp4">Your browser does not support video playback.</video>
-          <figcaption>EPIC-KITCHENS</figcaption>
-        </figure>
-        <figure class="demo">
-          <video controls playsinline preload="none" poster="assets/images/ego4d-poster.jpg" width="1600" height="588" aria-label="Ego4D tactile prediction video"><source src="assets/videos/ego4d.mp4" type="video/mp4">Your browser does not support video playback.</video>
-          <figcaption>Ego4D</figcaption>
-        </figure>
-        <figure class="demo">
-          <video controls playsinline preload="none" poster="assets/images/egodex-poster.jpg" width="1600" height="506" aria-label="EgoDex tactile prediction video"><source src="assets/videos/egodex.mp4" type="video/mp4">Your browser does not support video playback.</video>
-          <figcaption>EgoDex</figcaption>
-        </figure>
+      <h3>In-the-wild video examples</h3>
+      <p class="gallery-intro">The same model predicts touch across distinct everyday settings, without tactile sensors at test time. Each clip pairs the egocentric view with its tactile prediction.</p>
+      <div class="demo-groups">
+        <section class="demo-group" aria-labelledby="demo-egodex">
+          <div class="demo-group-heading"><h4 id="demo-egodex">EgoDex</h4><span>2 sequences</span></div>
+          <div class="demo-grid">
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/egodex-poster.jpg" aria-label="EgoDex add and remove tactile prediction video"><source src="assets/videos/egodex.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Add &amp; remove</figcaption></figure>
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/egodex-fold-poster.jpg" aria-label="EgoDex folding tactile prediction video"><source src="assets/videos/egodex-fold.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Folding</figcaption></figure>
+          </div>
+        </section>
+        <section class="demo-group" aria-labelledby="demo-epic">
+          <div class="demo-group-heading"><h4 id="demo-epic">EPIC-KITCHENS</h4><span>2 sequences</span></div>
+          <div class="demo-grid">
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/epic-kitchens-poster.jpg" aria-label="EPIC-KITCHENS sequence 10 tactile prediction video"><source src="assets/videos/epic-kitchens.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Sequence 10</figcaption></figure>
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/epic-kitchens-second-poster.jpg" aria-label="EPIC-KITCHENS sequence 03 tactile prediction video"><source src="assets/videos/epic-kitchens-second.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Sequence 03</figcaption></figure>
+          </div>
+        </section>
+        <section class="demo-group" aria-labelledby="demo-ego4d">
+          <div class="demo-group-heading"><h4 id="demo-ego4d">Ego4D</h4><span>2 sequences</span></div>
+          <div class="demo-grid">
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/ego4d-poster.jpg" aria-label="Ego4D sequence 102 tactile prediction video"><source src="assets/videos/ego4d.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Sequence 102</figcaption></figure>
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/ego4d-second-poster.jpg" aria-label="Ego4D sequence 106 tactile prediction video"><source src="assets/videos/ego4d-second.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Sequence 106</figcaption></figure>
+          </div>
+        </section>
+        <section class="demo-group" aria-labelledby="demo-more">
+          <div class="demo-group-heading"><h4 id="demo-more">More everyday scenes</h4><span>2 sequences</span></div>
+          <div class="demo-grid">
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/egopat3d-poster.jpg" aria-label="EgoPAT3D tactile prediction video"><source src="assets/videos/egopat3d.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>EgoPAT3D</figcaption></figure>
+            <figure class="demo"><video controls playsinline preload="none" poster="assets/images/everyday-interaction-poster.jpg" aria-label="Everyday interaction tactile prediction video"><source src="assets/videos/everyday-interaction.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Everyday interaction</figcaption></figure>
+          </div>
+        </section>
       </div>
 
       <h3>Scaling with data</h3>
@@ -117,7 +139,7 @@
         <a href="assets/images/scaling.png" target="_blank" rel="noopener noreferrer" aria-label="Open the data scaling figure at full resolution">
           <img src="assets/images/scaling.png" alt="Contact prediction AUROC, IoU, and F1 increase as the amount of training data rises from 10 to 100 percent" width="2132" height="889" loading="lazy">
         </a>
-        <figcaption><strong>Data scaling.</strong> Contact prediction on the held-out benchmark improves as the training set grows. <a href="assets/images/scaling.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+        <figcaption><strong>Data scaling.</strong> Contact prediction on the held-out benchmark improves as the training set grows.</figcaption>
       </figure>
     </section>
 
