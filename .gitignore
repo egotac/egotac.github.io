@@ -1,0 +1,7 @@
+# Local extraction and preview cache
+tmp/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
