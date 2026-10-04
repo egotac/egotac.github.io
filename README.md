@@ -14,13 +14,14 @@ Open <http://localhost:8000>. The site is static and does not need a build step.
 
 ## Publish
 
-The intended repository is `egotac/egotac.github.io`, which publishes at <https://egotac.github.io/>. Create that repository under the `egotac` GitHub account or organization, push this directory's `main` branch, then enable **Settings → Pages → Deploy from a branch → main / (root)**. The `.nojekyll` file keeps GitHub Pages from running Jekyll.
+The repository is `egotac/egotac.github.io`, which publishes at <https://egotac.github.io/>. Push this directory's `main` branch, then enable **Settings → Pages → Deploy from a branch → main / (root)** if Pages has not already been configured. The `.nojekyll` file keeps GitHub Pages from running Jekyll.
 
 The website files and the paper/media assets required by the page all live in this repository. The larger research code and source materials remain outside it in the parent `egotac` folder.
 
 ## Content
 
 - `index.html`, `styles.css`, `script.js`: site source
-- `assets/images/`: visuals adapted from the paper and project materials
+- `assets/images/`: full figures rendered from the corresponding PDFs in `../EgoTac@NIPS26/egotac-fig/`, plus video posters
 - `assets/videos/`: compressed, labeled zero-shot demo clips from EPIC-KITCHENS, Ego4D, and EgoDex
 - `assets/paper/`: local copy of the arXiv manuscript
+- `assets/icons/`: arXiv and GitHub marks from [Simple Icons](https://simpleicons.org/), plus a document icon for PDF

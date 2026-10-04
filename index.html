@@ -3,194 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="EgoTac predicts dense tactile force and contact directly from unconstrained egocentric video.">
-  <meta name="theme-color" content="#f5f3ed">
-  <meta property="og:title" content="EgoTac — In-the-wild Tactile Prediction from Egocentric Vision">
-  <meta property="og:description" content="Learning to see touch from 5.7M+ visual-tactile pairs.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="EgoTac predicts tactile force and contact from egocentric human video. NeurIPS 2026 poster.">
   <meta property="og:type" content="website">
-  <title>EgoTac — In-the-wild Tactile Prediction</title>
+  <meta property="og:title" content="EgoTac: In-the-wild Tactile Prediction from Egocentric Vision">
+  <meta property="og:description" content="Predicting tactile force and contact from egocentric human video.">
+  <meta property="og:image" content="https://egotac.github.io/assets/images/overview.png">
+  <title>EgoTac: In-the-wild Tactile Prediction from Egocentric Vision</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="EgoTac home">
-      <span class="wordmark-dot" aria-hidden="true"></span>EgoTac
-    </a>
-    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#overview">Overview</a>
-      <a href="#method">Method</a>
-      <a href="#results">Results</a>
-      <a href="#citation">Citation</a>
-      <a class="nav-github" href="https://github.com/egotac" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    </nav>
+    <div class="container header-inner">
+      <a class="site-name" href="#top">EgoTac</a>
+      <nav aria-label="Main navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span>NeurIPS 2026</span><span class="eyebrow-sep">/</span><span>Project page</span></div>
-        <h1>Seeing is<br><em>touching.</em></h1>
-        <p class="hero-deck">EgoTac predicts dense tactile force and contact directly from unconstrained egocentric video.</p>
-        <div class="authors" aria-label="Authors">
-          <span>Wenkang Zhang<sup>1,2</sup></span>
-          <span>Chengbo Yuan<sup>3</sup></span>
-          <span>Zicheng Zhang<sup>4</sup></span>
-          <span>Zhengxue Cheng<sup>2</sup></span>
-          <span>Yang Gao<sup>1,3,†</sup></span>
-        </div>
-        <p class="affiliations"><sup>1</sup> Shanghai Qi Zhi Institute · <sup>2</sup> Shanghai Jiao Tong University · <sup>3</sup> Tsinghua University · <sup>4</sup> Fudan University</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="https://arxiv.org/abs/2608.15060" target="_blank" rel="noreferrer">
-            <span class="button-icon" aria-hidden="true">↗</span> arXiv
-          </a>
-          <a class="button button-light" href="assets/paper/egotac-paper.pdf" target="_blank">
-            <span class="button-icon" aria-hidden="true">↓</span> PDF
-          </a>
-          <a class="button button-light" href="https://github.com/egotac" target="_blank" rel="noreferrer">
-            <span class="button-icon code-icon" aria-hidden="true">&lt;/&gt;</span> Code
-          </a>
-        </div>
+  <main id="main" class="container">
+    <section class="intro" aria-labelledby="paper-title">
+      <p class="venue">NeurIPS 2026 · Poster</p>
+      <h1 id="paper-title">EgoTac: In-the-wild Tactile Prediction from Egocentric Vision</h1>
+      <div class="authors" aria-label="Authors">
+        <span>Wenkang Zhang<sup>1,2</sup></span>
+        <span>Chengbo Yuan<sup>3</sup></span>
+        <span>Zicheng Zhang<sup>4</sup></span>
+        <span>Zhengxue Cheng<sup>2</sup></span>
+        <span>Yang Gao<sup>1,3,†</sup></span>
       </div>
-
-      <div class="hero-visual reveal" aria-label="Force and contact predictions visualized on hands">
-        <div class="visual-frame">
-          <div class="visual-label label-force"><i></i> Continuous force</div>
-          <img src="assets/images/tactile-modalities.png" alt="Dense force shown as a red-yellow heatmap and binary contact shown in green on MANO hands" width="1672" height="941">
-          <div class="visual-label label-contact"><i></i> Binary contact</div>
-        </div>
-        <div class="hero-index" aria-hidden="true"><span>01</span><span>Vision → Touch</span></div>
+      <p class="affiliations"><sup>1</sup> Shanghai Qi Zhi Institute &nbsp; <sup>2</sup> Shanghai Jiao Tong University &nbsp; <sup>3</sup> Tsinghua University &nbsp; <sup>4</sup> Fudan University</p>
+      <p class="corresponding">† Corresponding author</p>
+      <div class="resource-links" aria-label="Paper resources">
+        <a href="https://arxiv.org/abs/2608.15060" target="_blank" rel="noopener noreferrer"><img src="assets/icons/arxiv.svg" alt="" width="19" height="19">arXiv</a>
+        <a href="assets/paper/egotac-paper.pdf" target="_blank" rel="noopener noreferrer"><img src="assets/icons/pdf.svg" alt="" width="19" height="19">PDF</a>
+        <a href="https://github.com/egotac" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="" width="19" height="19">GitHub</a>
       </div>
-      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="one-line">Predicting tactile force and contact on both hands from first-person video.</p>
     </section>
 
-    <section class="statement section-pad" id="overview">
-      <div class="section-kicker reveal"><span>01</span> The idea</div>
-      <div class="statement-grid">
-        <h2 class="display-copy reveal">What if we could recover <span>how an interaction feels</span> from how it looks?</h2>
-        <div class="statement-body reveal">
-          <p>Human video is abundant, contact-rich, and easy to scale. Tactile data is not. EgoTac bridges this gap by learning a shared representation of touch across continuous force measurements and binary contact labels.</p>
-          <p>Once trained, it can add tactile priors to existing egocentric video—without gloves, force sensors, or object models at inference time.</p>
-        </div>
-      </div>
-      <div class="metrics reveal" aria-label="Key results">
-        <article><strong>5.7M<sup>+</sup></strong><span>visual–tactile pairs</span></article>
-        <article><strong>&lt;0.06<small>N</small></strong><span>in-domain force error</span></article>
-        <article><strong>778<small>×2</small></strong><span>MANO vertices</span></article>
-        <article><strong>0</strong><span>tactile sensors at test time</span></article>
-      </div>
+    <figure class="paper-figure lead-figure">
+      <a href="assets/images/overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the EgoTac overview figure at full resolution">
+        <img src="assets/images/overview.png" alt="Overview of EgoTac: force-labeled self-collected data and contact-labeled hand-object datasets train a model that predicts touch in unseen egocentric videos" width="3090" height="973" fetchpriority="high">
+      </a>
+      <figcaption><strong>Overview.</strong> EgoTac learns from force-labeled and contact-labeled interactions, then predicts tactile force and contact in videos recorded without tactile sensors. <a href="assets/images/overview.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+    </figure>
+
+    <section id="abstract" class="content-section">
+      <h2>Abstract</h2>
+      <p>Touch is essential to dexterous manipulation, but the egocentric human videos widely used for robot learning rarely include tactile measurements. EgoTac predicts dense tactile information directly from egocentric video. It is trained on more than 5.7 million image–tactile pairs that combine continuous force measurements with binary contact labels. The model achieves an average in-domain force error below 0.06 N, improves over a prior contact estimator on out-of-domain benchmarks, and produces zero-shot predictions on unconstrained videos.</p>
     </section>
 
-    <section class="dataset-band">
-      <div class="dataset-image reveal">
-        <img src="assets/images/capture-system.png" alt="The self-collected EgoTac capture setup with head-mounted camera and tactile gloves" width="1254" height="1254" loading="lazy">
-        <div class="image-tag">EgoTac-SC capture system</div>
-      </div>
-      <div class="dataset-copy reveal">
-        <div class="section-kicker light"><span>02</span> Unified data</div>
-        <h2>One tactile language.<br>Many data sources.</h2>
-        <p>EgoTac aligns heterogeneous sources to the MANO hand surface, pairing a self-collected force dataset with large-scale hand–object interaction datasets that provide contact supervision.</p>
-        <div class="data-flow" aria-label="Dataset unification flow">
-          <div><span>01</span><b>Egocentric RGB</b><small>First-person interaction video</small></div>
-          <div><span>02</span><b>Mixed supervision</b><small>Force + geometric contact</small></div>
-          <div><span>03</span><b>MANO alignment</b><small>A shared dense hand topology</small></div>
-        </div>
-      </div>
+    <section id="dataset" class="content-section">
+      <h2>EgoTac dataset</h2>
+      <p>We bring together a self-collected dataset with measured tactile force and hand–object interaction datasets with contact supervision. Both are mapped to the MANO hand surface, giving the model a common representation across data sources.</p>
+      <figure class="paper-figure">
+        <a href="assets/images/dataset.png" target="_blank" rel="noopener noreferrer" aria-label="Open the dataset figure at full resolution">
+          <img src="assets/images/dataset.png" alt="The EgoTac dataset combines heterogeneous tactile and contact labels in a shared MANO representation, including a self-collected camera and tactile glove setup" width="3583" height="1395" loading="lazy">
+        </a>
+        <figcaption><strong>Dataset overview.</strong> Mixed-source supervision and the self-collected capture system. <a href="assets/images/dataset.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+      </figure>
     </section>
 
-    <section class="method section-pad" id="method">
-      <div class="section-heading reveal">
-        <div class="section-kicker"><span>03</span> Model</div>
-        <h2>From visual dynamics<br>to dense touch.</h2>
-        <p>A compact encoder–decoder turns temporal visual context into per-vertex force and contact predictions.</p>
-      </div>
-      <div class="architecture-card reveal">
-        <img src="assets/images/architecture.png" alt="EgoTac model architecture: vision encoder, temporal fusion, tactile decoder, and force and contact heads" width="1672" height="941" loading="lazy">
-      </div>
-      <div class="method-steps reveal">
-        <article><span>01</span><h3>See</h3><p>A pretrained vision transformer extracts spatial-semantic tokens from an egocentric clip.</p></article>
-        <article><span>02</span><h3>Fuse</h3><p>Temporal fusion captures interaction dynamics—the onset, duration, and release of touch.</p></article>
-        <article><span>03</span><h3>Decode</h3><p>A tactile decoder with adaptive layer normalization produces force and contact over both hands.</p></article>
-      </div>
+    <section id="method" class="content-section">
+      <h2>Method</h2>
+      <p>EgoTac encodes a short sequence of egocentric frames, fuses information over time, and decodes a tactile state for both hands. Its outputs include continuous force and binary contact on the hand surface.</p>
+      <figure class="paper-figure">
+        <a href="assets/images/method.png" target="_blank" rel="noopener noreferrer" aria-label="Open the method figure at full resolution">
+          <img src="assets/images/method.png" alt="EgoTac architecture with visual encoding, temporal fusion, a tactile decoder, and separate force regression and contact classification outputs" width="2898" height="1134" loading="lazy">
+        </a>
+        <figcaption><strong>Model architecture.</strong> Visual tokens are fused over time and decoded into per-vertex force and contact predictions. <a href="assets/images/method.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+      </figure>
     </section>
 
-    <section class="results" id="results">
-      <div class="results-intro section-pad reveal">
-        <div>
-          <div class="section-kicker light"><span>04</span> Zero-shot generalization</div>
-          <h2>Touch,<br>in the wild.</h2>
-        </div>
-        <p>EgoTac transfers beyond its training environments to unconstrained, third-party egocentric videos. It identifies the active hand and tracks fine-grained contact changes through long interactions.</p>
-      </div>
+    <section id="results" class="content-section">
+      <h2>Results</h2>
+      <p>On force-labeled in-domain data, EgoTac reaches an average force error below 0.06 N. On out-of-domain contact benchmarks, it outperforms the contact estimation baseline. The same model can also infer touch in uninstrumented daily-life videos.</p>
+      <h3>Zero-shot predictions</h3>
+      <figure class="paper-figure">
+        <a href="assets/images/zero-shot.png" target="_blank" rel="noopener noreferrer" aria-label="Open the zero-shot results figure at full resolution">
+          <img src="assets/images/zero-shot.png" alt="Qualitative tactile predictions on EgoDex, EPIC-KITCHENS, Ego4D, and EgoPAT3D videos" width="2637" height="1127" loading="lazy">
+        </a>
+        <figcaption><strong>In-the-wild results.</strong> Examples from EgoDex, EPIC-KITCHENS, Ego4D, and EgoPAT3D. <a href="assets/images/zero-shot.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+      </figure>
 
-      <div class="video-grid section-pad">
-        <figure class="video-card reveal">
-          <div class="video-shell"><video muted loop playsinline preload="metadata" poster="assets/images/epic-kitchens-poster.jpg"><source src="assets/videos/epic-kitchens.mp4" type="video/mp4"></video><button class="play-button" aria-label="Play EPIC-KITCHENS prediction"><span>▶</span></button></div>
-          <figcaption><span>EPIC-KITCHENS</span><small>Unconstrained daily activity</small></figcaption>
+      <h3>Video examples</h3>
+      <div class="demo-grid">
+        <figure class="demo">
+          <video controls playsinline preload="none" poster="assets/images/epic-kitchens-poster.jpg" width="1600" height="672" aria-label="EPIC-KITCHENS tactile prediction video"><source src="assets/videos/epic-kitchens.mp4" type="video/mp4">Your browser does not support video playback.</video>
+          <figcaption>EPIC-KITCHENS</figcaption>
         </figure>
-        <figure class="video-card reveal">
-          <div class="video-shell"><video muted loop playsinline preload="metadata" poster="assets/images/ego4d-poster.jpg"><source src="assets/videos/ego4d.mp4" type="video/mp4"></video><button class="play-button" aria-label="Play Ego4D prediction"><span>▶</span></button></div>
-          <figcaption><span>Ego4D</span><small>Large-scale egocentric video</small></figcaption>
+        <figure class="demo">
+          <video controls playsinline preload="none" poster="assets/images/ego4d-poster.jpg" width="1600" height="588" aria-label="Ego4D tactile prediction video"><source src="assets/videos/ego4d.mp4" type="video/mp4">Your browser does not support video playback.</video>
+          <figcaption>Ego4D</figcaption>
         </figure>
-        <figure class="video-card reveal">
-          <div class="video-shell"><video muted loop playsinline preload="metadata" poster="assets/images/egodex-poster.jpg"><source src="assets/videos/egodex.mp4" type="video/mp4"></video><button class="play-button" aria-label="Play EgoDex prediction"><span>▶</span></button></div>
-          <figcaption><span>EgoDex</span><small>Dexterous manipulation</small></figcaption>
+        <figure class="demo">
+          <video controls playsinline preload="none" poster="assets/images/egodex-poster.jpg" width="1600" height="506" aria-label="EgoDex tactile prediction video"><source src="assets/videos/egodex.mp4" type="video/mp4">Your browser does not support video playback.</video>
+          <figcaption>EgoDex</figcaption>
         </figure>
       </div>
 
-      <div class="scaling section-pad reveal">
-        <div class="scaling-copy">
-          <span class="mini-label">Scaling behavior</span>
-          <h3>More data.<br>Better touch.</h3>
-          <p>Performance improves steadily as training volume grows, indicating a practical path toward video-scale tactile understanding.</p>
-        </div>
-        <div class="scaling-plot"><img src="assets/images/data-scaling.png" alt="Bar charts showing AUROC, IOU and F1 improving as training data scales from 10 to 100 percent" width="1759" height="752" loading="lazy"></div>
-      </div>
+      <h3>Scaling with data</h3>
+      <p>Using more training data improves contact prediction across AUROC, IoU, and F1.</p>
+      <figure class="paper-figure scaling-figure">
+        <a href="assets/images/scaling.png" target="_blank" rel="noopener noreferrer" aria-label="Open the data scaling figure at full resolution">
+          <img src="assets/images/scaling.png" alt="Contact prediction AUROC, IoU, and F1 increase as the amount of training data rises from 10 to 100 percent" width="2132" height="889" loading="lazy">
+        </a>
+        <figcaption><strong>Data scaling.</strong> Contact prediction on the held-out benchmark improves as the training set grows. <a href="assets/images/scaling.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+      </figure>
     </section>
 
-    <section class="abstract section-pad">
-      <div class="section-kicker reveal"><span>05</span> Abstract</div>
-      <div class="abstract-grid">
-        <h2 class="reveal">A scalable path from pixels to physical interaction.</h2>
-        <div class="abstract-text reveal">
-          <p>Touch is fundamental to dexterous manipulation, yet most egocentric human data increasingly used for robot learning lacks tactile information. Directly collecting tactile data at scale is difficult, while human video is abundant.</p>
-          <p>We introduce EgoTac, a generalizable model that predicts rich tactile information directly from egocentric human videos. Trained on over 5.7M image–tactile pairs, it learns from both continuous force measurements and binary contact. EgoTac achieves strong in-domain force prediction, outperforms prior contact estimation on out-of-domain benchmarks, and enables zero-shot tactile prediction on unconstrained video.</p>
-          <a class="text-link" href="https://arxiv.org/abs/2608.15060" target="_blank" rel="noreferrer">Read the full paper <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="citation section-pad" id="citation">
-      <div class="citation-copy reveal">
-        <div class="section-kicker"><span>06</span> Citation</div>
-        <h2>If our work helps<br>your research.</h2>
-        <p>Please cite EgoTac using the BibTeX entry.</p>
-      </div>
-      <div class="code-block reveal">
-        <button class="copy-button" type="button" aria-label="Copy BibTeX">Copy</button>
-        <pre><code id="bibtex">@misc{zhang2026egotac,
-  title   = {EgoTac: In-the-wild Tactile Prediction
-             from Egocentric Vision},
-  author  = {Zhang, Wenkang and Yuan, Chengbo and
-             Zhang, Zicheng and Cheng, Zhengxue and Gao, Yang},
-  year    = {2026},
-  eprint  = {2608.15060},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV}
+    <section id="citation" class="content-section citation-section">
+      <h2>Citation</h2>
+      <p>If you use EgoTac in your research, please cite the paper.</p>
+      <div class="bibtex-box">
+        <button class="copy-button" type="button" aria-label="Copy BibTeX">Copy BibTeX</button>
+        <pre><code id="bibtex">@misc{zhang2026egotacinthewildtactileprediction,
+  title={EgoTac: In-the-wild Tactile Prediction from Egocentric Vision},
+  author={Wenkang Zhang and Chengbo Yuan and Zicheng Zhang and Zhengxue Cheng and Yang Gao},
+  year={2026},
+  eprint={2608.15060},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2608.15060}
 }</code></pre>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-mark"><span class="wordmark-dot"></span>EgoTac</div>
-    <p>Seeing touch in everyday interaction.</p>
-    <div class="footer-links"><a href="https://arxiv.org/abs/2608.15060">Paper</a><a href="https://github.com/egotac">GitHub</a><a href="#top">Back to top ↑</a></div>
+    <div class="container footer-inner">
+      <span>EgoTac · NeurIPS 2026</span>
+      <a href="https://github.com/egotac/egotac.github.io" target="_blank" rel="noopener noreferrer">Website source</a>
+    </div>
   </footer>
 </body>
 </html>
