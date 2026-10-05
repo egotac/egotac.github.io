@@ -16,7 +16,7 @@ Open <http://localhost:8000>. The site is static and does not need a build step.
 
 The repository is `egotac/egotac.github.io`, which publishes at <https://egotac.github.io/>. Push this directory's `main` branch, then enable **Settings → Pages → Deploy from a branch → main / (root)** if Pages has not already been configured. The `.nojekyll` file keeps GitHub Pages from running Jekyll.
 
-The website files and the paper/media assets required by the page all live in this repository. The larger research code and source materials remain outside it in the parent `egotac` folder. The [model](https://huggingface.co/wkzhang/EgoTac) and [EgoTac-SC dataset](https://huggingface.co/datasets/wkzhang/EgoTac-SC) are linked from the page. The [code repository](https://github.com/Mr-Zwkid/EgoTac) is currently private, so its page item remains a non-clickable release placeholder until public access is available.
+The website files and the paper/media assets required by the page all live in this repository. The larger research code and source materials remain outside it in the parent `egotac` folder. The page links to the released [code](https://github.com/Mr-Zwkid/EgoTac), [model](https://huggingface.co/wkzhang/EgoTac), and [EgoTac-SC dataset](https://huggingface.co/datasets/wkzhang/EgoTac-SC).
 
 ## Content
 

@@ -37,12 +37,10 @@ h1 { max-width: 860px; margin: 0 auto 23px; font-family: "DM Sans", -apple-syste
 .affiliations { max-width: 800px; margin: 10px auto 0; font-size: 13px; color: var(--muted); }
 .corresponding { margin: 1px 0 0; font-size: 12px; color: var(--muted); }
 .resource-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 25px 0 25px; }
-.resource-links a, .resource-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 102px; padding: 8px 14px; border: 1px solid #cbd6cf; border-radius: 5px; background: #fff; color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.35; text-decoration: none; transition: border-color .15s ease, background-color .15s ease; }
+.resource-links a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 102px; padding: 8px 14px; border: 1px solid #cbd6cf; border-radius: 5px; background: #fff; color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.35; text-decoration: none; transition: border-color .15s ease, background-color .15s ease; }
 .resource-links a:hover { border-color: #8f9996; background: #f6f8f7; }
 .resource-links a:focus-visible, .paper-figure a:focus-visible, .copy-button:focus-visible { outline: 3px solid #83bda9; outline-offset: 3px; }
 .resource-links img { display: block; width: 19px; height: 19px; }
-.resource-link.is-pending { color: #66736b; background: #f8faf8; border-color: #e0e7e1; cursor: default; }
-.resource-link small { color: #7e8981; font-size: 11px; font-weight: 500; }
 .one-line { max-width: 730px; margin: 0 auto; color: #46584d; font-family: var(--serif); font-size: clamp(18px, 2vw, 22px); line-height: 1.35; }
 
 .paper-figure { max-width: 920px; margin: 24px auto 0; }
